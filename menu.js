@@ -5,12 +5,12 @@ import isGenap from "./features/7_isGenap.js";
 import hitungDiskon from "./features/5_hitungDiskon.js";
 import luasSilinder from "./features/4_luasSilinder.js";
 import { main } from "./features/8_calculator.js";
-import isGenap from "./features/7_isGenap.js";
 import convertCtoK from "./features/6_conversionCtoK.js";
 import toLowerCase from "./features/9_toLowerCase.js";
 import { pyramidNumber } from "./features/10_pyramidNumber.js";
 import { isPalindrome } from "./features/3_checkPalindromNumber.js"
 import calculation from "./features/11_calculation.js";
+import { inputUser } from "./features/2_inputUser.js";
 
 
 
@@ -25,6 +25,7 @@ async function menu() {
         console.log("Selamat Datang di Menu")
         console.log("Silahkan pilih dari dibawah ini:")
         console.log("1. Hello World")
+        console.log("2. Input Nama dan Umur")
         console.log("3. Check is Palindrome Number")
         console.log("4. Hitung Luas Silinder")
         console.log("5. Hitung Diskon")
@@ -47,6 +48,9 @@ async function menu() {
             switch (input) {
                 case "1":
                     sayHelloWorld()
+                    break;
+                case "2":
+                    await inputUser(rl)
                     break;
                 case "3":
                     const number = await rl.question("Masukkan angka : ")
