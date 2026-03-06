@@ -1,6 +1,7 @@
 import { createInterface } from "node:readline/promises";
 
 import sayHelloWorld from "./features/1_greeting.js";
+import { main } from "./features/8_calculator.js";
 
 async function menu() {
     let exit = false
@@ -13,6 +14,7 @@ async function menu() {
         console.log("Selamat Datang di Menu")
         console.log("Silahkan pilih dari dibawah ini:")
         console.log("1. Hello World")
+        console.log("8. Simple Calculator");
         console.log("0. Exit")
 
         try {
@@ -26,6 +28,9 @@ async function menu() {
             switch (input) {
                 case "1":
                     sayHelloWorld()
+                    break;
+                case "8":
+                    main(rl)
                     break;
 
                 default:
