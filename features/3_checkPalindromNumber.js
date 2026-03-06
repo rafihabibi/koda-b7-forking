@@ -1,5 +1,5 @@
 export const isPalindrome = (x) => {
-  const num = x;
+  const num = Number(x);
 
   if (x < 0) return false;
 
@@ -10,6 +10,6 @@ export const isPalindrome = (x) => {
     ans = ans * 10 + last_digit;
     x = Math.floor(x / 10);
   }
-
+  
   return num === ans;
 };

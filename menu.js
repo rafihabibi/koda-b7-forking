@@ -6,6 +6,7 @@ import { main } from "./features/8_calculator.js";
 import isGenap from "./features/7_isGenap.js";
 import convertCtoK from "./features/6_conversionCtoK.js";
 import toLowerCase from "./features/9_toLowerCase.js";
+import { isPalindrome } from "./features/3_checkPalindromNumber.js"
 
 async function menu() {
     let exit = false
@@ -18,6 +19,7 @@ async function menu() {
         console.log("Selamat Datang di Menu")
         console.log("Silahkan pilih dari dibawah ini:")
         console.log("1. Hello World")
+        console.log("3. Check is Palindrome Number")
         console.log("4. Hitung Luas Silinder")
         console.log("6. Konversi Celcius-Kelvin")
         console.log("7. Cek Ganjil Genap")
@@ -36,6 +38,10 @@ async function menu() {
             switch (input) {
                 case "1":
                     sayHelloWorld()
+                    break;
+                case "3":
+                    const number = await rl.question("Masukkan angka : ")
+                    console.log(isPalindrome(number))
                     break;
                 case "4":
                     const jariJari = await rl.question("Masukkan jari jari : ")
