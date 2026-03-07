@@ -1,5 +1,3 @@
-
-
 export async function inputUser(rl) {
   try {
     const nama = await rl.question('Siapa nama Anda? ');
